@@ -5,6 +5,11 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "forta";
+  src: url("/Forta.ttf");
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,8 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: white;
+    --foreground: white;
   }
 }
 
@@ -23,4 +28,125 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.forta {
+  font-family: "forta";
+}
+
+.gradient {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=9801ff&c2=ffffff&gt=r&gd=dtt
+*/
+  background: radial-gradient(at top, #9801ff, #dca6ff, #ffffff);
+}
+
+.facegradient {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=9801ff&c2=ffffff&gt=r&gd=dtt
+*/
+  background: radial-gradient(at top right, hsl(0, 0%, 100%), #ffffff);
+}
+
+.namefont {
+  font-family: "Cabinet Grotesk";
+}
+.purple {
+  background-color: #9801ff;
+}
+
+@keyframes blinking {
+  0% {
+    transform: scaleY(1);
+  }
+  5% {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(1);
+    transform: translateX(-10px);
+  }
+  15% {
+    transform: translateX(-10px) scaleY(0);
+  }
+  20% {
+    transform: translateX(-10px) scaleY(1);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+  35% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  75% {
+    transform: scaleY(1);
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(10px) scaleY(0);
+  }
+  85% {
+    transform: scaleY(0);
+    transform: translateX(10px);
+  }
+  90% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.blinking {
+  animation: blinking 0.5s infinite;
+  animation-duration: 8s; /* Total cycle time of 4 seconds */
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Smooth transition on transform */
+}
+
+.topleft {
+  transform: translateX(-15px) translateY(-15px);
+}
+
+.topcenter {
+  transform: translateY(-15px);
+}
+
+.centercenter {
+  transform: translateY(-10px);
+}
+
+.centerleft {
+  transform: translateX(-15px) translateY(-10px);
+}
+
+.bottomleft {
+  transform: translateX(-15px);
+}
+
+.centerright {
+  transform: translateX(15px) translateY(-10px);
+}
+
+.topright {
+  transform: translateX(15px) translateY(-15px);
+}
+
+.bottomcenter {
+  transform: translate(0, 0);
+}
+
+.bottomright {
+  transform: translateX(15px);
 }
