@@ -48,9 +48,9 @@ const Navbar = ({ className }: Props) => {
             J
           </button>
         </div>
-        <div className="w-full flex bg-black justify-center">
+        <div className="w-full flex justify-center">
           {/* bg-[rgba(31,31,31,0.11)] */}
-          <div className="w-fit gap-2 p-5 rounded-full items-center hidden sm:flex">
+          <div className="w-fit gap-2 p-5 rounded-full bg-black/10 items-center hidden sm:flex">
             <button
               className={`p-2.5 px-3 transition-all duration-100 rounded-full text-white ${
                 activeButton === "hello"
@@ -95,10 +95,6 @@ const Navbar = ({ className }: Props) => {
         </div>
         <div className="w-full flex justify-end">
           <button className="purple py-3 px-5 rounded-full">Lets Chat!</button>
-        </div>
-        <div className="flex sm:hidden">
-          {/* <i className="text-[21px] fa-solid fa-bars"></i> */}
-          <i className="text-[25px] fa-brands fa-github"></i>
         </div>
       </div>
     </div>

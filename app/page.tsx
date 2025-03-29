@@ -71,7 +71,7 @@ export default function Home() {
   }, [coordinates]); // This will run every time `coordinates` changes
 
   return (
-    <div className="bg-[url(/landing.png)] bg-cover flex flex-col">
+    <div className="overflow-hidden bg-cover flex flex-col">
       <div className="fixed top-0 left-0 w-full h-full">
         <Noise
           patternSize={1000}
@@ -101,42 +101,44 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="absolute flex z-200 justify-between flex-col items-center w-full bottom-0">
-        <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
-          <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
-            <div className="blinking flex gap-7">
-              <div
-                className={`relative transition-all duration-750 purple ${currPos} opacity-80 w-[15px] h-[25px] rounded-full`}
-              >
-                <div className="bg-white w-[5px] h-[5px] rounded-full absolute top-1 left-1" />
-              </div>
-              <div
-                className={` relative transition-all duration-750 ${currPos} purple opacity-80 w-[15px] h-[25px] rounded-full`}
-              >
-                <div className="bg-white w-[5px] h-[5px] rounded-full absolute top-1 left-1" />
+      <div className="relative gradient overflow-auto flex flex-col h-[85vh] sm:h-[100vh]">
+        <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full bottom-0">
+          <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
+            <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
+              <div className="blinking flex gap-7">
+                <div
+                  className={`relative transition-all duration-750 purple ${currPos} opacity-80 w-[15px] h-[25px] rounded-full`}
+                >
+                  <div className="bg-white w-[5px] h-[5px] rounded-full absolute top-1 left-1" />
+                </div>
+                <div
+                  className={` relative transition-all duration-750 ${currPos} purple opacity-80 w-[15px] h-[25px] rounded-full`}
+                >
+                  <div className="bg-white w-[5px] h-[5px] rounded-full absolute top-1 left-1" />
+                </div>
               </div>
             </div>
           </div>
+          <div className="w-[200px] h-[100px] rounded-t-[80px] bg-white" />
         </div>
-        <div className="w-[200px] h-[100px] rounded-t-[80px] bg-white" />
-      </div>
-      <div className="gradient overflow-auto flex flex-col h-[100vh]">
         <Navbar className="absolute" />
-        <div className="flex-grow flex flex-col items-center justify-center">
-          <div className="w-fit flex flex-col gap-3">
-            <p className="text-[21px]">Hello, my name is </p>
-            <h1 className="namefont leading-none text-[80px] font uppercase">
-              Junheng Zheng
-            </h1>
-            {/* <p>Position: {currPos}</p> */}
-            <div className="flex w-full justify-between items-center">
-              <p className="text-[21px]">
-                I am a frontend developer and UI/UX Designer
-              </p>
-              <div className="flex gap-3 items-center">
-                <button className="flex gap-2 items-center py-4 px-8 purple text-white rounded-full">
-                  Resume <i className="fa-solid fa-download"></i>
-                </button>
+        <div className="box-border p-10 flex-grow flex flex-col w-full items-center justify-center">
+          <div className="relative w-full items-center flex flex-col">
+            <div className="w-fit flex flex-col gap-3">
+              <p className="text-[21px]">Hello, my name is </p>
+              <h1 className="namefont leading-none text-[60px] font uppercase sm:text-[80px]">
+                Junheng Zheng
+              </h1>
+              {/* <p>Position: {currPos}</p> */}
+              <div className="flex w-full flex-col gap-3 justify-between sm:items-center sm:flex-row">
+                <p className="text-[21px]">
+                  I am a frontend developer and UI/UX Designer
+                </p>
+                <div className="flex gap-3 items-center">
+                  <button className="flex gap-2 items-center py-4 px-8 purple text-white rounded-full">
+                    Resume <i className="fa-solid fa-download"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
