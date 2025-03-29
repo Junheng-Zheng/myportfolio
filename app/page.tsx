@@ -101,7 +101,7 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="relative gradient overflow-auto flex flex-col h-[80vh] sm:h-[100vh]">
+      <div className="relative gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
@@ -124,14 +124,14 @@ export default function Home() {
         <Navbar className="absolute" />
         <div className="box-border p-10 flex-grow flex flex-col w-full items-center justify-center">
           <div className="relative w-full items-center flex flex-col">
-            <div className="w-fit flex flex-col gap-3">
-              <p className="text-[21px]">Hello, my name is </p>
-              <h1 className="namefont leading-none text-[60px] font uppercase sm:text-[80px]">
+            <div className="w-fit flex items-center sm:items-start flex-col gap-3">
+              <p className="text-[18px] sm:text-[21px]">Hello, my name is </p>
+              <h1 className="namefont text-center sm:text-left leading-none text-[60px] font uppercase sm:text-[80px]">
                 Junheng Zheng
               </h1>
               {/* <p>Position: {currPos}</p> */}
-              <div className="flex w-full flex-col gap-3 justify-between sm:items-center sm:flex-row">
-                <p className="text-[21px]">
+              <div className="flex w-full items-center  flex-col gap-5 justify-between sm:items-center sm:flex-row">
+                <p className="text-center sm:text-left text-[21px]">
                   I am a frontend developer and UI/UX Designer
                 </p>
                 <div className="flex gap-3 items-center">

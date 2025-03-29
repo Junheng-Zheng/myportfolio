@@ -43,14 +43,14 @@ const Navbar = ({ className }: Props) => {
   return (
     <div className={`${className} fixed z-200 top-0 p-5 w-full`}>
       <div className="w-full flex justify-between items-center">
-        <div className="w-full flex justify-start">
+        <div className="w-full hidden sm:flex justify-start">
           <button className="h-[35px] w-[35px] border rounded-full text-white purple">
             J
           </button>
         </div>
         <div className="w-full flex justify-center">
           {/* bg-[rgba(31,31,31,0.11)] */}
-          <div className="w-fit gap-2 p-5 rounded-full bg-black/10 items-center hidden sm:flex">
+          <div className="w-fit gap-2 p-5 rounded-full bg-black/10 items-center flex">
             <button
               className={`p-2.5 px-3 transition-all duration-100 rounded-full text-white ${
                 activeButton === "hello"
@@ -93,7 +93,7 @@ const Navbar = ({ className }: Props) => {
             </button>
           </div>
         </div>
-        <div className="w-full flex justify-end">
+        <div className="w-full hidden sm:flex justify-end">
           <button className="purple py-3 px-5 rounded-full">Lets Chat!</button>
         </div>
       </div>
