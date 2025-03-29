@@ -441,7 +441,7 @@ export default function Home() {
       </div>
       <div
         id="experience"
-        className="p-7 bg-black/95 w-full h-fit sm:px-30 sm:py-15  rounded-t-[25px] sm:rounded-t-[50px]"
+        className="p-7 bg-black/95 text-white w-full h-fit sm:px-30 sm:py-15  rounded-t-[25px] sm:rounded-t-[50px]"
       >
         <h1 className="text-[27px] sm:text-[45px] namefont font-bold uppercase">
           Experience
