@@ -79,15 +79,6 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden bg-cover flex flex-col">
-      <div className="fixed top-0 left-0 w-full h-full">
-        <Noise
-          patternSize={1000}
-          patternScaleX={1.5}
-          patternScaleY={1.5}
-          patternRefreshInterval={2}
-          patternAlpha={15}
-        />
-      </div>
       {/* <div className = "w-full p-3 bg-[rgba(124,42,200,0.5)] flex items-center justify-between fixed bottom-0 z-20">
       <div className = "flex items-center gap-2">
         <p>Frontend Dev</p>
@@ -108,6 +99,15 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
+      <div className="z-1000 fixed top-0 left-0 w-full h-full">
+        <Noise
+          patternSize={1000}
+          patternScaleX={1.5}
+          patternScaleY={1.5}
+          patternRefreshInterval={2}
+          patternAlpha={15}
+        />
+      </div>
       <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
@@ -132,17 +132,19 @@ export default function Home() {
         <div className="box-border p-10 flex-grow flex flex-col w-full items-center justify-center">
           <div className="relative w-full items-center flex flex-col">
             <div className="w-fit flex items-center sm:items-start flex-col gap-3">
-              <p className="text-[18px] sm:text-[21px]">Hello, my name is </p>
-              <h1 className="namefont text-center sm:text-left leading-none text-[60px] font uppercase sm:text-[80px]">
+              <p className="text-[18px] w-full text-left sm:text-left sm:text-[21px]">
+                Hello, my name is{" "}
+              </p>
+              <h1 className="namefont text-left w-full sm:text-left leading-none text-[32px] font uppercase sm:text-[80px]">
                 Junheng Zheng
               </h1>
               {/* <p>Position: {currPos}</p> */}
               <div className="flex w-full items-center  flex-col gap-5 justify-between sm:items-center sm:flex-row">
-                <p className="text-center sm:text-left text-[21px]">
+                <p className="text-left sm:text-left text-[16px] sm:text-[21px]">
                   I am a frontend developer and UI/UX Designer
                 </p>
-                <div className="flex w-fit gap-3 items-center">
-                  <button className="flex gap-2 items-center py-4 px-8 purple text-white justify-center rounded-full">
+                <div className="flex w-full sm:w-fit gap-3 items-left">
+                  <button className="flex gap-2 items-left py-4 px-8 purple text-white justify-center rounded-full">
                     Resume <i className="fa-solid fa-download"></i>
                   </button>
                 </div>
@@ -152,60 +154,60 @@ export default function Home() {
         </div>
       </div>
       <div className="z-20 relative w-full sm:gap-15 gap-5 h-fit sm:flex-row flex-col flex bg-white text-black sm:px-30 sm:py-15 p-7 items-start">
-        <div className="flex flex-col gap-5 sm:gap-20 opacity-80 w-full sm:w-[75%]">
-          <div className="flex flex-col gap-5 sm:gap-5">
+        <div className="flex flex-col gap-4 sm:gap-20 opacity-80 w-full sm:w-[75%]">
+          <div className="flex flex-col gap-2 sm:gap-5">
             <h1
               style={{ wordSpacing: "0.5px" }}
-              className="namefont sm:uppercase leading-none font-extrabold text-[30px] sm:text-[45px] tracking-[-1.5px]"
+              className="namefont sm:uppercase leading-none font-extrabold text-[21px] sm:text-[45px] sm:tracking-[-1.5px]"
             >
               Junheng Zheng is a Web & Mobile Computing Student at RIT.
             </h1>
-            <p className="text-[18px]">
+            <p className="text-[16px]">
               I enjoy building projducts in react and nextjs. I put a large
               empahsis on user experence and aeshtetics. I never settle for
               less, and I love creating engaging and appealling expereinces. You
               will find me working on side projects during my free time.
             </p>
           </div>
-          <div className="sm:w-[70%] w-full flex gap-3 sm:gap-10 justify-between items-start">
+          <div className="hidden sm:w-[70%] w-full sm:flex gap-3 sm:gap-10 justify-between items-start">
             <div className="w-full flex flex-col gap-0 sm:gap-2">
               <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 3rd
               </h2>
-              <p className="text-[14px] sm:text-[16px]">Year @ RIT</p>
+              <p className="text-[12px] sm:text-[16px]">Year @ RIT</p>
             </div>
             <div className="w-full flex flex-col gap-0 sm:gap-2">
               <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 3.6
               </h2>
-              <p className="text-[14px] sm:text-[16px]">GPA | Honors</p>
+              <p className="text-[12px] sm:text-[16px]">GPA | Honors</p>
             </div>
             <div className="w-full flex flex-col gap-0 sm:gap-2">
               <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 26'
               </h2>
-              <p className="text-[14px] sm:text-[16px]">Dec 26' Grad</p>
+              <p className="text-[12px] sm:text-[16px]">Dec 26' Grad</p>
             </div>
           </div>
         </div>
-        <div className="flex w-full sm:w-[25%] items-center flex-col-reverse gap-3">
-          <p className="p-2 rounded-full purple text-white w-fit px-5">
+        <div className="flex w-[70%] sm:w-[25%] items-start sm:items-center flex-col-reverse gap-3">
+          <p className="p-2 rounded-full purple text-white text-[12px] sm:text-[16px] w-fit px-5">
             My Current Favorites! <i className="fa-solid fa-heart"></i>
           </p>
           <div className="flex items-center justify-center w-fit">
-            <div className="h-fit aspect-square flex items-center translate-x-4 rotate-5 justify-center p-2 rounded-full  bg-purple-400 border-3 border-white text-black">
+            <div className="h-fit aspect-square flex items-center translate-x-0 sm:translate-x-4 rotate-5 justify-center p-2 rounded-full  bg-gray-400 border-3 border-white text-black">
               <img src="https://img.icons8.com/?size=100&id=122637&format=png&color=FFFFFF" />
             </div>
-            <div className="h-fit aspect-square flex items-center translate-x-2 rotate-5 justify-center p-2 rounded-full bg-purple-400 border-3 border-white text-black">
+            <div className="h-fit aspect-square flex items-center -translate-x-2 sm:translate-x-2 rotate-5 justify-center p-2 rounded-full bg-gray-400 border-3 border-white text-black">
               <img src="https://img.icons8.com/?size=100&id=39853&format=png&color=FFFFFF" />
             </div>
-            <div className="h-fit aspect-square flex items-center rotate-5 justify-center p-2 rounded-full  bg-purple-400  border-3 border-white text-black">
+            <div className="h-fit aspect-square flex items-center sm:translate-x-0 -translate-x-4 rotate-5 justify-center p-2 rounded-full  bg-gray-400  border-3 border-white text-black">
               <img src="https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF" />
             </div>
-            <div className="h-fit aspect-square flex items-center -translate-x-2 rotate-5 justify-center p-2 rounded-full  bg-purple-400 border-3 border-white text-black">
+            <div className="h-fit aspect-square flex items-center -translate-x-6 sm:-translate-x-2 rotate-5 justify-center p-2 rounded-full  bg-gray-400 border-3 border-white text-black">
               <img src="https://img.icons8.com/?size=100&id=r2OarXWQc7B6&format=png&color=FFFFFF" />
             </div>
-            <div className="h-fit aspect-square flex items-center -translate-x-4 rotate-5 justify-center p-2 rounded-full  bg-purple-400 border-3 border-white text-black">
+            <div className="h-fit aspect-square flex items-center -translate-x-8 sm:-translate-x-4 rotate-5 justify-center p-2 rounded-full  bg-gray-400 border-3 border-white text-black">
               <img src="https://img.icons8.com/?size=100&id=amXjtNWVYSKP&format=png&color=FFFFFF" />
             </div>
             {/* <div className="h-fit aspect-square flex items-center translate-x-4 rotate-5 justify-center p-2 rounded-full bg-white border-2 border-black text-black">
@@ -233,29 +235,57 @@ export default function Home() {
             </div>
           </div> */}
         </div>
+        <div className="sm:w-[70%] pt-10 w-full sm:hidden flex gap-3 sm:gap-12 justify-between items-start">
+          <div className="w-full flex flex-col gap-0 sm:gap-2">
+            <h2 className="purpletext leading-none namefont text-[45px] sm:text-[75px]">
+              3rd
+            </h2>
+            <p className="text-[14px] sm:text-[16px]">Year @ RIT</p>
+          </div>
+          <div className="w-full flex flex-col gap-0 sm:gap-2">
+            <h2 className="purpletext leading-none namefont text-[45px] sm:text-[75px]">
+              3.6
+            </h2>
+            <p className="text-[14px] sm:text-[16px]">GPA | Honors</p>
+          </div>
+          <div className="w-full flex flex-col gap-0 sm:gap-2">
+            <h2 className="purpletext leading-none namefont text-[45px] sm:text-[75px]">
+              26'
+            </h2>
+            <p className="text-[14px] sm:text-[16px]">Dec 26' Grad</p>
+          </div>
+        </div>
       </div>
-      <div className="overflow-hidden relative w-full h-fit sm:px-30 sm:py-15 p-5 gap-0 sm:gap-4 flex flex-col text-black bg-white border-t border-gray-300">
-        <h1 className="text-[4.1vh] sm:text-[45px] namefont font-bold uppercase">
+      <div className="overflow-hidden relative w-full h-fit sm:px-30 sm:py-15 p-5 gap-0 flex flex-col text-black bg-gray-50 border-t border-gray-300">
+        <h1 className="text-[21px] sm:text-[45px] namefont font-bold uppercase">
           Projects
         </h1>
-        <div className="py-8 flex border-b border-gray-300 justify-between items-center">
-          <h2 className="text-[25px]">Tiger Snack Box</h2>
-          <p className="text-purple-500 text-[25px] font-bold uppercase">01</p>
+        <div className="py-6 sm:py-8 flex border-b border-gray-300 hover:bg-gray-100 justify-between items-center">
+          <h2 className="text-[16px] sm:text-[25px]">Tiger Snack Box</h2>
+          <p className="text-gray-500 text-[16px] sm:text-[25px] font-bold uppercase">
+            01
+          </p>
         </div>
-        <div className="py-8 flex border-b border-gray-300 justify-between items-center">
-          <h2 className="text-[25px]">American Dream</h2>
-          <p className="text-purple-600 text-[25px] font-bold uppercase">02</p>
+        <div className="py-6 sm:py-8 flex border-b border-gray-300 hover:bg-gray-100  justify-between items-center">
+          <h2 className="text-[16[x] sm:text-[25px]">American Dream</h2>
+          <p className="text-gray-600 text-[16px] sm:text-[25px] font-bold uppercase">
+            02
+          </p>
         </div>
-        <div className="py-8 flex border-b border-gray-300 justify-between items-center">
-          <h2 className="text-[25px]">MyInterface</h2>
-          <p className="text-purple-700 text-[25px] font-bold uppercase">03</p>
+        <div className="py-6 sm:py-8 flex border-b border-gray-300 hover:bg-gray-100  justify-between items-center">
+          <h2 className="text-[16px] sm:text-[25px]">MyInterface</h2>
+          <p className="text-gray-700 text-[16px] sm:text-[25px] font-bold uppercase">
+            03
+          </p>
         </div>
-        <div className="py-8 cursor-pointer z-20 flex border-b border-gray-300 justify-between items-center">
-          <h2 className="text-[25px]">RIT SIS Redesign</h2>
-          <p className="text-purple-800 text-[25px] font-bold uppercase">04</p>
+        <div className="py-6 sm:py-10 cursor-pointer z-20 flex border-b hover:bg-gray-100  border-gray-300 justify-between items-center">
+          <h2 className="text-[16px] sm:text-[25px]">RIT SIS Redesign</h2>
+          <p className="text-gray-800 text-[16px] sm:text-[25px] font-bold uppercase">
+            04
+          </p>
         </div>
         <div className="hidden absolute sm:flex z-200 right-50 justify-between flex-col items-end w-full bottom-0">
-          <div className="w-[150px] purple relative translate-y-1/3 h-[150px] rounded-t-full">
+          <div className="w-[150px] purple relative translate-y-1/3 h-[150px] rounded-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
               <div className="blinking flex gap-7">
                 <div

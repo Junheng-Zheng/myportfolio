@@ -50,6 +50,7 @@ body * {
 
 .gradientmobile {
   background: radial-gradient(at top left, #9801ff, #dca6ff, #ffffff);
+  background: radial-gradient(at top left, black, gray, #ffffff);
 }
 
 .aboutgradient {
@@ -72,10 +73,12 @@ body * {
   font-family: "Cabinet Grotesk";
 }
 .purple {
-  background-color: #9801ff;
+  /* background-color: #9801ff; */
+  background-color: black;
 }
 .purpletext {
   color: #9801ff;
+  color: black;
 }
 @keyframes blinking {
   0% {

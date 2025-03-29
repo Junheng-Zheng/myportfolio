@@ -41,7 +41,7 @@ const Navbar = ({ className }: Props) => {
     </Link>
   );
   return (
-    <div className={`${className} fixed z-200 top-0 p-5 w-full`}>
+    <div className={`${className} absolute z-200 top-0 p-5 w-full`}>
       <div className="w-full flex justify-between items-center">
         <div className="w-full hidden sm:flex justify-start">
           <button className="h-[35px] w-[35px] border rounded-full text-white purple">
