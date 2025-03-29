@@ -87,8 +87,6 @@ export default function Home() {
   };
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-  const [currOne, setOne] = useState(false);
-  const [currTwo, setTwo] = useState(false);
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const [currPos, setCurrPos] = useState("none");
 

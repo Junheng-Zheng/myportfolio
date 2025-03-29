@@ -16,6 +16,7 @@ const Noise: React.FC<NoiseProps> = ({
   patternAlpha = 15,
 }) => {
   const grainRef = useRef<HTMLCanvasElement | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = grainRef.current;
@@ -25,6 +26,7 @@ const Noise: React.FC<NoiseProps> = ({
     if (!ctx) return;
 
     let frame = 0;
+    let resizeTimeout: NodeJS.Timeout;
 
     const patternCanvas = document.createElement("canvas");
     patternCanvas.width = patternSize;
@@ -36,11 +38,13 @@ const Noise: React.FC<NoiseProps> = ({
     const patternPixelDataLength = patternSize * patternSize * 4;
 
     const resize = () => {
-      if (!canvas) return;
-      canvas.width = window.innerWidth * window.devicePixelRatio;
-      canvas.height = window.innerHeight * window.devicePixelRatio;
-
-      ctx.scale(patternScaleX, patternScaleY);
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (!canvas) return;
+        canvas.width = window.innerWidth * window.devicePixelRatio;
+        canvas.height = window.innerHeight * window.devicePixelRatio;
+        ctx.scale(patternScaleX, patternScaleY);
+      }, 200); // Debounce resize by 200ms
     };
 
     const updatePattern = () => {
@@ -69,7 +73,7 @@ const Noise: React.FC<NoiseProps> = ({
         drawGrain();
       }
       frame++;
-      window.requestAnimationFrame(loop);
+      animationFrameRef.current = window.requestAnimationFrame(loop);
     };
 
     window.addEventListener("resize", resize);
@@ -78,6 +82,9 @@ const Noise: React.FC<NoiseProps> = ({
 
     return () => {
       window.removeEventListener("resize", resize);
+      if (animationFrameRef.current) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, [
     patternSize,
