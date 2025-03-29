@@ -218,7 +218,7 @@ export default function Home() {
                   I am a frontend dev and UI/UX Designer
                 </p>
                 <div className="flex w-full sm:w-fit gap-3 justify-end">
-                  <button className="flex gap-2 items-left py-4 px-8 border-b border-white/60 bg-black/20 sm:bg-black/60 text-white justify-center rounded-full">
+                  <button className="flex gap-2 items-left py-4 px-8 border-b border-white/60 bg-black/20 sm:bg-black/80 text-white justify-center rounded-full">
                     Resume <i className="fa-solid fa-download"></i>
                   </button>
                 </div>
@@ -357,7 +357,7 @@ export default function Home() {
           "Groq",
           "Firebase",
         ])}
-        <div className="hidden absolute sm:flex z-200 right-30 justify-between flex-col items-end w-full bottom-0">
+        {/* <div className="hidden absolute sm:flex z-200 right-30 justify-between flex-col items-end w-full bottom-0">
           <div className="flex flex-col items-center">
             <div className="w-[150px] purple relative translate-y-[10px] h-[150px] rounded-full">
               <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
@@ -377,7 +377,7 @@ export default function Home() {
             </div>
             <div className="w-[200px] rounded-t-full h-[30px] bg-black" />
           </div>
-        </div>
+        </div> */}
         {/* <div className="flex gap-5 h-[350px]">
           <div className="overflow-hidden p-2 rounded-[10px] relative w-full">
             <div className="absolute top-0 left-0 w-full h-full">
