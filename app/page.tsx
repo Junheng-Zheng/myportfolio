@@ -23,12 +23,11 @@ export default function Home() {
         "touches" in event ? event.touches[0].clientX : event.clientX;
       const clientY =
         "touches" in event ? event.touches[0].clientY : event.clientY;
-
       setCoordinates({ x: clientX, y: clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleMouseMove); // Mobile support
+    window.addEventListener("touchmove", handleMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -106,7 +105,7 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[90vh]">
+      <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
