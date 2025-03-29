@@ -85,7 +85,8 @@ export default function Home() {
       </div>
     );
   };
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  const isMobile =
+    typeof window !== "undefined" && /Mobi|Android/i.test(navigator.userAgent);
 
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const [currPos, setCurrPos] = useState("none");
