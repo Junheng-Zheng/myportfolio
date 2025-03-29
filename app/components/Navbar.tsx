@@ -48,7 +48,7 @@ const Navbar = ({ className }: Props) => {
             J
           </button>
         </div>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex bg-black justify-center">
           {/* bg-[rgba(31,31,31,0.11)] */}
           <div className="w-fit gap-2 p-5 rounded-full items-center hidden sm:flex">
             <button
