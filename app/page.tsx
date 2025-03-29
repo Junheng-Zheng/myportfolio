@@ -181,7 +181,7 @@ export default function Home() {
           patternAlpha={15}
         />
       </div> */}
-      {isProjectHover && videoInfo && projectsample(videoInfo)}
+      {/* {isProjectHover && videoInfo && projectsample(videoInfo)} */}
       <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
