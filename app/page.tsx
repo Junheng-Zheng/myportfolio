@@ -172,7 +172,7 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="z-1000 fixed top-0 left-0 w-full h-full">
+      {/* <div className="z-1000 fixed top-0 left-0 w-full h-full">
         <Noise
           patternSize={1000}
           patternScaleX={1.5}
@@ -180,7 +180,7 @@ export default function Home() {
           patternRefreshInterval={2}
           patternAlpha={15}
         />
-      </div>
+      </div> */}
       {/* {isProjectHover && videoInfo && projectsample(videoInfo)} */}
       <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
