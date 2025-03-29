@@ -12,12 +12,15 @@ export default function Home() {
       </div>
     );
   };
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
   const [currOne, setOne] = useState(false);
   const [currTwo, setTwo] = useState(false);
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const [currPos, setCurrPos] = useState("none");
 
   useEffect(() => {
+    if (isMobile) return; // Disable effect for mobile users
     const handleMouseMove = (event: MouseEvent | TouchEvent) => {
       const clientX =
         "touches" in event ? event.touches[0].clientX : event.clientX;
@@ -153,7 +156,7 @@ export default function Home() {
           <div className="flex flex-col gap-5 sm:gap-5">
             <h1
               style={{ wordSpacing: "0.5px" }}
-              className="namefont sm:uppercase leading-none font-extrabold text-[4.1vh] sm:text-[45px] tracking-[-1.5px]"
+              className="namefont sm:uppercase leading-none font-extrabold text-[30px] sm:text-[45px] tracking-[-1.5px]"
             >
               Junheng Zheng is a Web & Mobile Computing Student at RIT.
             </h1>
