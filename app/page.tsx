@@ -112,6 +112,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    if (isMobile) return; // Disable effect for mobile users
     const screenHeightCenter = window.innerHeight / 2;
     const screenWidthThird = window.innerWidth / 3; // Divide screen width into thirds
 
