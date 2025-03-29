@@ -41,7 +41,7 @@ const Navbar = ({ className }: Props) => {
     </Link>
   );
   return (
-    <div className={`${className} absolute z-200 top-0 p-5 w-full`}>
+    <div className={`${className} z-5000 absolute z-200 top-0 p-5 w-full`}>
       <div className="w-full flex justify-between items-center">
         <div className="w-full hidden sm:flex justify-start">
           <button className="h-[35px] w-[35px] border rounded-full text-white purple">
@@ -51,46 +51,54 @@ const Navbar = ({ className }: Props) => {
         <div className="w-full flex justify-center">
           {/* bg-[rgba(31,31,31,0.11)] */}
           <div className="w-fit gap-2 p-5 rounded-full bg-black/10 items-center flex">
-            <button
-              className={`p-2.5 px-3 transition-all duration-100 rounded-full text-white ${
-                activeButton === "hello"
-                  ? "purple"
-                  : "hover:bg-[rgba(0,0,0,0.05)]"
-              }`}
-              onClick={() => handleButtonClick("hello")}
-            >
-              Hello
-            </button>
-            <button
-              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
-                activeButton === "about"
-                  ? "purple"
-                  : "hover:bg-[rgba(0,0,0,0.05)]"
-              }`}
-              onClick={() => handleButtonClick("about")}
-            >
-              About
-            </button>
-            <button
-              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
-                activeButton === "experience"
-                  ? "purple"
-                  : "hover:bg-[rgba(0,0,0,0.05)]"
-              }`}
-              onClick={() => handleButtonClick("experience")}
-            >
-              Experience
-            </button>
-            <button
-              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
-                activeButton === "projects"
-                  ? "purple"
-                  : "hover:bg-[rgba(0,0,0,0.05)]"
-              }`}
-              onClick={() => handleButtonClick("projects")}
-            >
-              Projects
-            </button>
+            <Link href={"#hello"}>
+              <button
+                className={`p-2.5 px-3 transition-all duration-100 rounded-full text-white ${
+                  activeButton === "hello"
+                    ? "purple"
+                    : "hover:bg-[rgba(0,0,0,0.05)]"
+                }`}
+                onClick={() => handleButtonClick("hello")}
+              >
+                Hello
+              </button>
+            </Link>
+            <Link href={"#about"}>
+              <button
+                className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                  activeButton === "about"
+                    ? "purple"
+                    : "hover:bg-[rgba(0,0,0,0.05)]"
+                }`}
+                onClick={() => handleButtonClick("hello")}
+              >
+                About
+              </button>
+            </Link>
+            <Link href={"#projects"}>
+              <button
+                className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                  activeButton === "projects"
+                    ? "purple"
+                    : "hover:bg-[rgba(0,0,0,0.05)]"
+                }`}
+                onClick={() => handleButtonClick("hello")}
+              >
+                Projects
+              </button>
+            </Link>
+            <Link href={"#experience"}>
+              <button
+                className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                  activeButton === "experience"
+                    ? "purple"
+                    : "hover:bg-[rgba(0,0,0,0.05)]"
+                }`}
+                onClick={() => handleButtonClick("hello")}
+              >
+                Experience
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-full hidden sm:flex justify-end">

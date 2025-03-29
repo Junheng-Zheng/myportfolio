@@ -68,6 +68,9 @@ body * {
 */
   background: radial-gradient(at top right, hsl(0, 0%, 100%), #ffffff);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .namefont {
   font-family: "Cabinet Grotesk";

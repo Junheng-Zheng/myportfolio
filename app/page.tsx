@@ -172,7 +172,7 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      {/* <div className="z-1000 fixed top-0 left-0 w-full h-full">
+      <div className="z-1000 fixed top-0 left-0 w-full h-full">
         <Noise
           patternSize={1000}
           patternScaleX={1.5}
@@ -180,7 +180,7 @@ export default function Home() {
           patternRefreshInterval={2}
           patternAlpha={15}
         />
-      </div> */}
+      </div>
       {/* {isProjectHover && videoInfo && projectsample(videoInfo)} */}
       <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[100vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
@@ -227,7 +227,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="z-20 relative w-full sm:gap-15 gap-5 h-fit sm:flex-row flex-col flex bg-white text-black sm:px-30 sm:py-15 p-7 items-start">
+      <div
+        id="about"
+        className="z-20 relative w-full sm:gap-15 gap-5 h-fit sm:flex-row flex-col flex bg-white text-black sm:px-30 sm:py-15 p-7 items-start"
+      >
         <div className="flex flex-col gap-4 sm:gap-20 opacity-80 w-full sm:w-[75%]">
           <div className="flex flex-col gap-2 sm:gap-5">
             <h1
@@ -332,7 +335,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="z-2000 overflow-hidden relative w-full h-fit sm:px-30 sm:py-15 p-7 gap-0 flex flex-col text-black bg-gray-100 border-t border-gray-300">
+      <div
+        id="projects"
+        className="z-2000 overflow-hidden relative w-full h-fit sm:px-30 sm:py-15 p-7 gap-0 flex flex-col text-black bg-gray-100 border-t border-gray-300"
+      >
         <h1 className="text-[27px] sm:text-[45px] namefont font-bold uppercase">
           Projects
         </h1>
@@ -433,7 +439,10 @@ export default function Home() {
           </div>
         </div> */}
       </div>
-      <div className="p-7 bg-black/95 w-full h-fit sm:px-30 sm:py-15  rounded-t-[25px] sm:rounded-t-[50px]">
+      <div
+        id="experience"
+        className="p-7 bg-black/95 w-full h-fit sm:px-30 sm:py-15  rounded-t-[25px] sm:rounded-t-[50px]"
+      >
         <h1 className="text-[27px] sm:text-[45px] namefont font-bold uppercase">
           Experience
         </h1>
