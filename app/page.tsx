@@ -101,8 +101,8 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="relative gradient overflow-auto flex flex-col h-[85vh] sm:h-[100vh]">
-        <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full bottom-0">
+      <div className="relative gradient overflow-auto flex flex-col h-[80vh] sm:h-[100vh]">
+        <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
               <div className="blinking flex gap-7">
@@ -119,7 +119,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[200px] h-[100px] rounded-t-[80px] bg-white" />
+          <div className="w-[200px] h-[100px] sm:h-[100px] rounded-t-[80px] bg-white" />
         </div>
         <Navbar className="absolute" />
         <div className="box-border p-10 flex-grow flex flex-col w-full items-center justify-center">
@@ -144,12 +144,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="z-20 relative w-full gap-15 h-fit flex bg-white text-black px-30 py-15 items-start">
-        <div className="flex flex-col gap-20 opacity-80 w-[75%]">
-          <div className="flex flex-col gap-5">
+      <div className="z-20 relative w-full sm:gap-15 gap-5 h-fit sm:flex-row flex-col flex bg-white text-black sm:px-30 sm:py-15 p-7 items-start">
+        <div className="flex flex-col gap-5 sm:gap-20 opacity-80 w-full sm:w-[75%]">
+          <div className="flex flex-col gap-5 sm:gap-5">
             <h1
               style={{ wordSpacing: "0.5px" }}
-              className="namefont uppercase leading-none font-extrabold text-[45px] tracking-[-1.5px]"
+              className="namefont sm:uppercase leading-none font-extrabold text-[4.1vh] sm:text-[45px] tracking-[-1.5px]"
             >
               Junheng Zheng is a Web & Mobile Computing Student at RIT.
             </h1>
@@ -160,28 +160,28 @@ export default function Home() {
               will find me working on side projects during my free time.
             </p>
           </div>
-          <div className="w-[70%] flex gap-10 justify-between items-start">
-            <div className="w-full flex flex-col gap-1">
-              <h2 className="purpletext leading-none namefont text-[75px]">
+          <div className="sm:w-[70%] w-full flex gap-3 sm:gap-10 justify-between items-start">
+            <div className="w-full flex flex-col gap-0 sm:gap-2">
+              <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 3rd
               </h2>
-              <p>Year @ RIT</p>
+              <p className="text-[14px] sm:text-[16px]">Year @ RIT</p>
             </div>
-            <div className="w-full flex flex-col gap-2">
-              <h2 className="purpletext leading-none namefont text-[75px]">
+            <div className="w-full flex flex-col gap-0 sm:gap-2">
+              <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 3.6
               </h2>
-              <p>GPA | Honors</p>
+              <p className="text-[14px] sm:text-[16px]">GPA | Honors</p>
             </div>
-            <div className="w-full flex flex-col gap-2">
-              <h2 className="purpletext leading-none namefont text-[75px]">
+            <div className="w-full flex flex-col gap-0 sm:gap-2">
+              <h2 className="purpletext leading-none namefont text-[42px] sm:text-[75px]">
                 26'
               </h2>
-              <p>Dec 2026 Graduate</p>
+              <p className="text-[14px] sm:text-[16px]">Dec 26' Grad</p>
             </div>
           </div>
         </div>
-        <div className="flex w-[25%] items-center flex-col-reverse gap-3">
+        <div className="flex w-full sm:w-[25%] items-center flex-col-reverse gap-3">
           <p className="p-2 rounded-full purple text-white w-fit px-5">
             My Current Favorites! <i className="fa-solid fa-heart"></i>
           </p>
@@ -227,8 +227,10 @@ export default function Home() {
           </div> */}
         </div>
       </div>
-      <div className="overflow-hidden relative w-full h-fit px-30 py-15 gap-4 flex flex-col text-black bg-white border-t border-gray-300">
-        <h1 className="text-[45px] namefont font-bold uppercase">Projects</h1>
+      <div className="overflow-hidden relative w-full h-fit sm:px-30 sm:py-15 p-5 gap-0 sm:gap-4 flex flex-col text-black bg-white border-t border-gray-300">
+        <h1 className="text-[4.1vh] sm:text-[45px] namefont font-bold uppercase">
+          Projects
+        </h1>
         <div className="py-8 flex border-b border-gray-300 justify-between items-center">
           <h2 className="text-[25px]">Tiger Snack Box</h2>
           <p className="text-purple-500 text-[25px] font-bold uppercase">01</p>
@@ -245,7 +247,7 @@ export default function Home() {
           <h2 className="text-[25px]">RIT SIS Redesign</h2>
           <p className="text-purple-800 text-[25px] font-bold uppercase">04</p>
         </div>
-        <div className="absolute flex z-200 right-50 justify-between flex-col items-end w-full bottom-0">
+        <div className="hidden absolute sm:flex z-200 right-50 justify-between flex-col items-end w-full bottom-0">
           <div className="w-[150px] purple relative translate-y-1/3 h-[150px] rounded-t-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
               <div className="blinking flex gap-7">
@@ -318,7 +320,7 @@ export default function Home() {
           </div>
         </div> */}
       </div>
-      <div className="bg-black w-full h-[50vh] rounded-t-[50px]"></div>
+      <div className="bg-black w-full h-[50vh] rounded-t-[25px] sm:rounded-t-[50px]"></div>
     </div>
   );
 }
