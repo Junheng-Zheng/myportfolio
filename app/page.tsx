@@ -205,7 +205,7 @@ export default function Home() {
         <Navbar className="absolute" />
         <div className="box-border p-10 flex-grow flex flex-col w-full items-center justify-center">
           <div className="relative w-full items-center flex flex-col">
-            <div className="w-fit flex items-center sm:items-start flex-col gap-3">
+            <div className="w-fit text-white flex items-center sm:items-start flex-col gap-3">
               <p className="text-[18px] w-full text-left sm:text-left sm:text-[21px]">
                 Hello, my name is
               </p>
