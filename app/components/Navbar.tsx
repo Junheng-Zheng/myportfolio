@@ -8,6 +8,10 @@ interface Props {
 
 const Navbar = ({ className }: Props) => {
   const [ishover, sethover] = useState(false);
+  const [activeButton, setActiveButton] = useState("hello");
+  const handleButtonClick = (buttonName: string) => {
+    setActiveButton(buttonName);
+  };
   const github = ishover ? (
     <Link
       onMouseEnter={() => {
@@ -46,11 +50,47 @@ const Navbar = ({ className }: Props) => {
         </div>
         <div className="w-full flex justify-center">
           {/* bg-[rgba(31,31,31,0.11)] */}
-          <div className="w-fit gap-5  p-5 rounded-full items-center hidden sm:flex">
-            <button className="purple py-2 px-3 rounded-full">Hello</button>
-            <button>About</button>
-            <button>Experience</button>
-            <button>Projects</button>
+          <div className="w-fit gap-2 p-5 rounded-full items-center hidden sm:flex">
+            <button
+              className={`p-2.5 px-3 transition-all duration-100 rounded-full text-white ${
+                activeButton === "hello"
+                  ? "purple"
+                  : "hover:bg-[rgba(0,0,0,0.05)]"
+              }`}
+              onClick={() => handleButtonClick("hello")}
+            >
+              Hello
+            </button>
+            <button
+              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                activeButton === "about"
+                  ? "purple"
+                  : "hover:bg-[rgba(0,0,0,0.05)]"
+              }`}
+              onClick={() => handleButtonClick("about")}
+            >
+              About
+            </button>
+            <button
+              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                activeButton === "experience"
+                  ? "purple"
+                  : "hover:bg-[rgba(0,0,0,0.05)]"
+              }`}
+              onClick={() => handleButtonClick("experience")}
+            >
+              Experience
+            </button>
+            <button
+              className={`p-2.5 transition-all duration-100 rounded-full text-white ${
+                activeButton === "projects"
+                  ? "purple"
+                  : "hover:bg-[rgba(0,0,0,0.05)]"
+              }`}
+              onClick={() => handleButtonClick("projects")}
+            >
+              Projects
+            </button>
           </div>
         </div>
         <div className="w-full flex justify-end">

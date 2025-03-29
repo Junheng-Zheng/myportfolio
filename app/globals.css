@@ -30,6 +30,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body * {
+  --tw-leading: 1;
+  line-height: 1;
+}
+
 .forta {
   font-family: "forta";
 }
@@ -40,6 +45,14 @@ body {
 * Gradient link: https://www.css-gradient.com/?c1=9801ff&c2=ffffff&gt=r&gd=dtt
 */
   background: radial-gradient(at top, #9801ff, #dca6ff, #ffffff);
+}
+
+.aboutgradient {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=9801ff&c2=ffffff&gt=r&gd=dtt
+*/
+  background: radial-gradient(at left top, #9801ff, #dca6ff, #ffffff);
 }
 
 .facegradient {
@@ -56,7 +69,9 @@ body {
 .purple {
   background-color: #9801ff;
 }
-
+.purpletext {
+  color: #9801ff;
+}
 @keyframes blinking {
   0% {
     transform: scaleY(1);
