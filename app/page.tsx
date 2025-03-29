@@ -448,7 +448,7 @@ export default function Home() {
         </h1>
         {experiencecard(
           "Liberty Mutual (Incoming)",
-          "Incoming on the CTU UI/UX Team in Summer 2025",
+          "Incoming UI/UX Designer on the CFT UX Research & Design team",
           `25'`
         )}
         {experiencecard(
