@@ -18,16 +18,21 @@ export default function Home() {
   const [currPos, setCurrPos] = useState("none");
 
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setCoordinates({
-        x: event.clientX,
-        y: event.clientY,
-      });
+    const handleMouseMove = (event: MouseEvent | TouchEvent) => {
+      const clientX =
+        "touches" in event ? event.touches[0].clientX : event.clientX;
+      const clientY =
+        "touches" in event ? event.touches[0].clientY : event.clientY;
+
+      setCoordinates({ x: clientX, y: clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleMouseMove); // Mobile support
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleMouseMove);
     };
   }, []);
 
@@ -101,7 +106,7 @@ export default function Home() {
         <p>Figma</p>
       </div>
     </div> */}
-      <div className="relative gradient overflow-hidden flex flex-col h-[100vh]">
+      <div className="relative gradientmobile sm:gradient overflow-hidden flex flex-col h-[90vh]">
         <div className="box-border absolute flex z-200 justify-between flex-col items-center w-full sm:translate-y-[0px] translate-y-[50px] bottom-0">
           <div className="w-[150px] relative translate-y-[10px] h-[150px] facegradient rounded-full">
             <div className="absolute top-0 w-full h-full items-center justify-center gap-4 flex flex-col">
@@ -134,8 +139,8 @@ export default function Home() {
                 <p className="text-center sm:text-left text-[21px]">
                   I am a frontend developer and UI/UX Designer
                 </p>
-                <div className="flex gap-3 items-center">
-                  <button className="flex gap-2 items-center py-4 px-8 purple text-white rounded-full">
+                <div className="flex w-fit gap-3 items-center">
+                  <button className="flex gap-2 items-center py-4 px-8 purple text-white justify-center rounded-full">
                     Resume <i className="fa-solid fa-download"></i>
                   </button>
                 </div>

@@ -48,6 +48,10 @@ body * {
   background: radial-gradient(at top, #9801ff, #dca6ff, #ffffff);
 }
 
+.gradientmobile {
+  background: radial-gradient(at top left, #9801ff, #dca6ff, #ffffff);
+}
+
 .aboutgradient {
   /*
 * Created with https://www.css-gradient.com
